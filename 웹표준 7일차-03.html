@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>라이언</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
+    <style>
+        body {
+            margin: 20px;
+            padding: 20px;
+            background: #f1f1f1;
+            color: #555;
+        }
+
+        button {
+            padding: 5px 15px;
+            background: #ccc;
+            color: #000;
+            cursor: pointer;
+            border-radius: 5px;
+            
+        }
+
+        button:hover {
+            background: #888;
+        }
+
+        img {
+            display: block;
+            margin-top: 50px;
+            width: 240px;
+            height: 240px;
+           
+        }
+
+        img.moving{
+            animation: moving 4s linear infinite;
+        }
+
+        @keyframes moving {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(800px);
+            }
+        }
+
+        
+    
+    </style>
+</head>
+<body>
+    <button id="add">add</button>
+    <button id="remove">remove</button>
+    <img src="../11월 11일/ggg1.gif" alt="라이언" class="lion">
+    <script>
+        $(function(){
+            $("#add").click(function(){
+                $(".lion").addClass("moving");
+            });
+            $("#remove").click(function(){
+                $(".lion").removeClass("moving");
+            });
+        })   
+    </script>
+       
+</body>
+</html>
